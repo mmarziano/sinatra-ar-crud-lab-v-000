@@ -17,7 +17,11 @@ class ApplicationController < Sinatra::Base
     erb :'index'
   end
   
+<<<<<<< HEAD
    get '/articles/new' do
+=======
+  get '/articles/new' do
+>>>>>>> 2fb2ea7d636f21d645dd7aa7058cdd70f19682ba
     erb :'new'
   end
   
@@ -32,6 +36,14 @@ class ApplicationController < Sinatra::Base
     erb :'show'
   end 
   
+<<<<<<< HEAD
+=======
+  get '/articles/:id/edit' do 
+    @article = Article.find_by_id(params[:id])
+    erb :'edit'
+  end   
+  
+>>>>>>> 2fb2ea7d636f21d645dd7aa7058cdd70f19682ba
   patch '/articles/:id' do 
     @article = Article.find_by_id(params[:id])
     @article.title = params[:title]
@@ -41,6 +53,7 @@ class ApplicationController < Sinatra::Base
     redirect to "/articles/#{@article.id}"
   end
   
+<<<<<<< HEAD
   get '/articles/:id/edit' do 
     @article = Article.find_by_id(params[:id])
     erb :'edit'
@@ -48,12 +61,17 @@ class ApplicationController < Sinatra::Base
   
   
   
+=======
+>>>>>>> 2fb2ea7d636f21d645dd7aa7058cdd70f19682ba
   delete '/articles/:id' do 
     @article = Article.find_by_id(params[:id])
     @article.destroy
     
     erb :'/articles'
   end 
+<<<<<<< HEAD
   
  
+=======
+>>>>>>> 2fb2ea7d636f21d645dd7aa7058cdd70f19682ba
 end

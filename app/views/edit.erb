@@ -2,7 +2,11 @@
 <p><%=@article.content %></p>
 
 
+<<<<<<< HEAD
 <form action="/articles/<%=@article.id%>" method="POST">
+=======
+<form action="/articles/:id>" method="POST">
+>>>>>>> 2fb2ea7d636f21d645dd7aa7058cdd70f19682ba
   <input id="hidden" type="hidden" name="_method" value="patch">
   <input type="text" name="title" value="Article Title">
   <input type="text" name="content" value="Article Content">
